@@ -16,12 +16,16 @@ class Tone:
     def GetToneAbove(self, steps):
         tone = Tone()
         nr = self.nrInToneMap+steps
-        if nr > toneMap.__len__():
-            nr = nr-toneMap.__len__() -1
+        nr = self.ClipToLength(nr)
         tone.CreateFromNumberInTonemap(nr)
         return tone
 
-
+    def ClipToLength(self, nr):
+        if nr >= toneMap.__len__():
+            nr = nr - toneMap.__len__() - 1
+        if nr >= toneMap.__len__():
+            self.ClipToLength(nr)
+        return nr
 
 
 class Note:
