@@ -3,15 +3,24 @@ keyboardStart = -2
 
 class Tone:
     nrInToneMap = -1
-    string = toneMap[nrInToneMap]
+    name = ""
 
     def CreateFromString(self, string):
         self.nrInToneMap = toneMap.index(string)
-        self.string = string
+        self.name = string
 
     def CreateFromNumberInTonemap(self, nr):
         self.nrInToneMap = nr
-        self.string = toneMap[nr]
+        self.name = toneMap[nr]
+
+    def GetToneAbove(self, steps):
+        tone = Tone()
+        nr = self.nrInToneMap+steps
+        if nr > toneMap.__len__():
+            nr = nr-toneMap.__len__() -1
+        tone.CreateFromNumberInTonemap(nr)
+        return tone
+
 
 
 
@@ -24,5 +33,13 @@ class Note:
         octavesCount = diffBottomHere * toneMap.__len__()
         inToneMapNR = self.tone.nrInToneMap
         return octavesCount+inToneMapNR
+
+    def GetAsName(self):
+        return str(self.tone) + str(self.height)
+
+    def Create(self, tone, number):
+        self.tone = tone
+        self.height = number
+
 
 

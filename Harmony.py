@@ -1,5 +1,5 @@
 import Tonality as t
-import Modes as m
+from Musicality import Modes as m
 from Consonance import Chord
 import Progression as p
 
