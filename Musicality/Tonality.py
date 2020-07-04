@@ -1,9 +1,12 @@
+import Musicality.Util as u
+
 toneMap = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"]
 keyboardStart = -2
 
 class Tone:
-    nrInToneMap = -1
-    name = ""
+    def __init__(self):
+        self.nrInToneMap = -1
+        self.name = ""
 
     def CreateFromString(self, string):
         self.nrInToneMap = toneMap.index(string)
@@ -16,16 +19,11 @@ class Tone:
     def GetToneAbove(self, steps):
         tone = Tone()
         nr = self.nrInToneMap+steps
-        nr = self.ClipToLength(nr)
+        nr = u.ClipToLength(u, nr, toneMap.__len__())
         tone.CreateFromNumberInTonemap(nr)
         return tone
 
-    def ClipToLength(self, nr):
-        if nr >= toneMap.__len__():
-            nr = nr - toneMap.__len__() - 1
-        if nr >= toneMap.__len__():
-            self.ClipToLength(nr)
-        return nr
+
 
 
 class Note:

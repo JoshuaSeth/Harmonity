@@ -3,10 +3,11 @@ import Musicality.Modes as m
 import Musicality.Util as u
 
 class Scale():
-    baseTone = None
-    tones = []
-    mode = None
-    modeName = ""
+    def __init__(self):
+        self.baseTone = None
+        self.tones = []
+        self.mode = None
+        self.modeName = ""
 
     def CreateFromToneAndMode(self, tone, modeName):
         self.baseTone = tone
