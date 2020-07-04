@@ -6,7 +6,7 @@ def Contains(list, name):
 
 def ClipToLength(self, nr, maxLen):
     if nr >= maxLen:
-        nr = nr - maxLen - 1
+        nr = nr - maxLen
     if nr >= maxLen:
         self.ClipToLength(nr)
     return nr

@@ -15,6 +15,7 @@ for tone in scale.tones:
     print(tone.name)
     chord1 = c.Chord()
     chord1.CreateTriadFromToneAndScale(tone, scale)
+    print(chord1.GetName())
     print(chord1.PrintTones())
 
 
