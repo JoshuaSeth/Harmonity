@@ -23,6 +23,9 @@ class Tone:
         tone.CreateFromNumberInTonemap(nr)
         return tone
 
+    def GetName(self):
+        return self.name
+
 
 
 

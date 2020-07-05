@@ -1,6 +1,7 @@
 import Musicality.ChordConfigurations as c
 import Musicality.Util as u
 import Musicality.Tonality as t
+import Musicality.Scale as s
 
 class Chord:
     def __init__(self):
@@ -38,15 +39,11 @@ class Chord:
         self.configuration = [chordConfig1, chordConfig2]
 
     def GetName(self):
-        return self.baseTone.name + " " + c.GetNameByConfiguration(self.configuration)
+        return self.baseTone.name + " " + u.GetKeyByValue(c.chordConfigurations, self.configuration)
 
     def GetPretty(self):
-        return self.GetName() + "/n Configuration: " + self.configuration + "/n Tones: " + self.tones
+        return self.GetName() + "\n Configuration: " + str(self.configuration) + "\n Tones: " + str(u.GetNames(self.tones))
 
+    def GetFittingScales(self):
+        return s.GetScalesFittingChords(s, [self])
 
-
-    def PrintTones(self):
-        printTones =[]
-        for tone in self.tones:
-            printTones.append(tone.name)
-        return printTones
