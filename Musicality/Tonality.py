@@ -9,6 +9,9 @@ class Tone:
         self.name = ""
 
     def CreateFromString(self, string):
+        if not toneMap.__contains__(string):
+            print("ERROR: the current tonemap does not contain tone: " + string)
+            return
         self.nrInToneMap = toneMap.index(string)
         self.name = string
 

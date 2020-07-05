@@ -2,6 +2,15 @@ import Musicality.Tonality as t
 import Musicality.Modes as m
 import Musicality.Util as u
 
+class ScaleList():
+    def __init__(self):
+        self.scales = []
+
+    def PrintPretty(self):
+        for scale in self.scales:
+            print(scale.GetPretty())
+
+
 class Scale():
     def __init__(self):
         self.baseTone = None
@@ -53,7 +62,7 @@ def GetAllScales():
 
 def GetScalesFittingChords(self, chords):
     scales = GetAllScales()
-    possibleScales = []
+    possibleScales = ScaleList()
     for scale in scales:
         append = True
         for chord in chords:
@@ -62,5 +71,5 @@ def GetScalesFittingChords(self, chords):
                     append = False
 
         if append == True:
-            possibleScales.append(scale)
+            possibleScales.scales.append(scale)
     return possibleScales

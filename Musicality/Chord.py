@@ -11,11 +11,15 @@ class Chord:
         self.baseTone = None
         self.configuration = None
 
-    def CreateChordFromTone(self, tone, configuration):
+    def CreateChordFromTone(self, tone, configuration=None, configurationName = None):
         self.baseTone=tone
         self.tones.append(tone)
 
-        self.configuration = c.chordConfigurations[configuration]
+        if configuration is not None:
+            self.configuration = configuration
+        if configurationName is not None:
+            self.configuration = c.chordConfigurations[configurationName]
+
         for steps in self.configuration:
             self.tones.append(tone.GetToneAbove(steps))
 

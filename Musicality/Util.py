@@ -19,7 +19,7 @@ def GetKeyByValue(dict, value):
     if val_list.__contains__(value):
         return key_list[val_list.index(value)]
     else:
-        print("Warning: " + value + " not found")
+        print("WARNING: " + str(value) + " not found")
         return "?"
 
 def GetNames(list):
