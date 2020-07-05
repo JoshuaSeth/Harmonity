@@ -1,6 +1,6 @@
-import Musicality.Tonality as t
-import Musicality.Modes as m
-import Musicality.Util as u
+import Harmonity.Tonality as t
+import Harmonity.Modes as m
+import Harmonity.Util as u
 
 class ScaleList():
     def __init__(self):
@@ -40,7 +40,7 @@ class Scale():
                 self.tones.append(newTone)
 
         #CREATE CHORDS
-        from Musicality import Chord
+        from Harmonity import Chord
         for tone in self.tones:
             chord = Chord.Chord()
             chord.CreateTriadFromToneAndScale(tone, self)

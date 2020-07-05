@@ -1,7 +1,7 @@
-import Musicality.ChordConfigurations as c
-import Musicality.Util as u
-import Musicality.Tonality as t
-import Musicality.Scale as s
+import Harmonity.ChordConfigurations as c
+import Harmonity.Util as u
+import Harmonity.Tonality as t
+import Harmonity.Scale as s
 
 class Chord:
     def __init__(self):

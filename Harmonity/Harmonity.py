@@ -1,4 +1,4 @@
-from Musicality import ChordParser as cp, Tonality as t, Chord as c, ChordConfigurations as cc
+from Harmonity import ChordParser as cp, Tonality as t, Chord as c, ChordConfigurations as cc
 
 def MakeChordFromString(string):
     toneName, chordStyleName = cp.StringToNoteAndStyle(string)

@@ -1,4 +1,4 @@
-import Musicality.Tonality as t
+import Harmonity.Tonality as t
 
 def StringToNoteAndStyle(input):
     #If Length is 1 it is simply a major chord of one letter

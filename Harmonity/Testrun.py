@@ -1,4 +1,4 @@
-from Musicality import Tonality as t, Chord as c, Scale as s, Harmonity as h
+from Harmonity import Tonality as t, Chord as c, Scale as s, Harmonity as h
 
 
 chord = h.MakeChord("D min")

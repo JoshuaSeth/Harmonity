@@ -1,4 +1,4 @@
-import Musicality.Util as u
+import Harmonity.Util as u
 
 toneMap = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"]
 keyboardStart = -2
