@@ -21,3 +21,29 @@ Modes = {"Major" : [2,2,1,2,2,2,1],
 "Octatonic_whole_start" : [2,1,2,1,2,1,2,1],
 "Octatonic_half_start" : [1,2,1,2,1,2,1,2]
          }
+
+ModeLabels = {"Major" : [],
+"Ionian" : ["","",""],
+"Dorian" : ["","",""],
+"Phrygian" : ["","",""],
+"Lydian" : ["","",""],
+"Mixolydian" : ["","",""],
+"Aeolian" : ["","",""],
+"Locrian" : ["","",""],
+"Adonoi_Moloch" : ["Klezmer","",""],
+"Harmonic_Minor" : ["","",""],
+"Phrygian_Dominant" : ["Klezmer","Indian","Middle Eastern", "Eastern European", "Flamenco", "Arabic", "Egyptian"],
+"Ahava_Raba" : ["Klezmer","",""],
+"Freygish" : ["Klezmer","",""],
+"Natural_Minor" : ["","",""],
+"Melodic_Minor" : ["","",""],
+"Ukrainian_Doran": ["Klezmer","",""],
+"Misheberakh" : ["Klezmer","",""],
+"Pentatonic" : [["Ancient","Ethnic","World", "Scottish", "Chinese", "Ethiopian", "Javanese", "Jazz", "Country"]],
+"Whole_Tone" : [["No Leading Tone","Indistinct","Blurred", "Equal tones", "Ominous, Debussy"], ],
+"Octatonic_whole_start" : [["Wandering, Dark, Sinister, Ambigious, Wagner"]],
+"Octatonic_half_start" : [["Wandering, Dark, Sinister, Ambigious, Wagner"]]
+         }
+
+#Test
+
